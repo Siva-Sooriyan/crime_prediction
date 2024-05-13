@@ -1,0 +1,68 @@
+body, html { 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url("images/crime.png");
+    background-attachment: fixed;   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.navbar{
+  display: flex; 
+  position: fixed;
+  right: 0px;
+}
+
+.logout-button{
+  background-color: #2879FE;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+  
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+
+}
+
+.heading{
+  color:white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 80px;
+  letter-spacing: 2px;
+  color:white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.diagram{
+  display: flex;
+  gap: 20px 50px;
+}
+
+.topic{
+  color: white;
+  font-size:xx-large;
+  font-weight: 700px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+

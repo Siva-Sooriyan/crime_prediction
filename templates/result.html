@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>INTRUSION DETECTION</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- <div class="header" data-aos="flip-right" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="linear"
+    data-aos-repeat="infinite"> -->
+  <div class="main-div">
+    <div class="navbar">
+      <a class="logout-button" href="{{url_for('logout')}}">Press here to logout</a>
+    </div>
+    <div class="header">
+      <h1 class="heading">Crime Level for the given Data :</h1>
+    </div>
+    <div>
+      <h2>{{ prediction }} level crime</h2>
+    </div>
+    <div class="diagram">
+      <div class="first-diagram">
+        <p class="topic">Crime Data Visualization :</p>
+        <img src="{{ url_for('static', filename='images/ut1.jpeg') }}">
+      </div>
+      <div class="second-diagram">
+        <p class="topic">Total IPC Crimes by Year :</p>
+        <img src="{{ url_for('static', filename='images/ut2.jpeg') }}" width="700">
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </div>
+</body>

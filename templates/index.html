@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+  <title>CRIME PREDICTION</title>
+</head>
+
+<body>
+  <form action="{{ url_for('predict')}}" method="POST">
+    <h1 align="center" style="margin-top: 50px">CRIME PREDICTION</h1>
+    <input id="input-1" type="number" placeholder="Enter the YEAR " name="year" required autofocus />
+    <label for="input-1">
+      <span class="label-text">YEAR</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-2" type="number" placeholder="Enter the MURDER Value" name="muredr" required />
+    <label for="input-2">
+      <span class="label-text">MURDER</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-3" type="number" placeholder="Enter the ATTEMPT TO MURDER Value" name="atom" required />
+    <label for="input-x3">
+      <span class="label-text">ATTEMPT TO MURDER</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-4" type="number" placeholder="Enter the CULPABLE HOMICIDE NOT AMOUNTING TO MURDER Value"
+      name="chnatm" required />
+    <label for="input-4">
+      <span class="label-text">CULPABLE HOMICIDE NOT AMOUNTING TO MURDER</span>
+      <span class="nav-dot"></span>
+    </label>
+    <input id="input-5" type="number" placeholder="Enter the RAPE Value" name="rape" required />
+    <label for="input-5">
+      <span class="label-text">RAPE</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-6" type="number" placeholder="Enter the CUSTODIAL RAPE Value" name="crape" required />
+    <label for="input-6">
+      <span class="label-text">CUSTODIAL RAPE</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-7" type="number" placeholder="Enter the OTHER RAPE Value" name="orape" required />
+    <label for="input-7">
+      <span class="label-text">OTHER RAPE</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-8" type="number" placeholder="Enter the KIDNAPPING & ABDUCTION Value" name="k&a" required />
+    <label for="input-8">
+      <span class="label-text">KIDNAPPING & ABDUCTION</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-9" type="number" placeholder="Enter the KIDNAPPING AND ABDUCTION OF WOMEN AND GIRLS Value"
+      name="kaaowag" required />
+    <label for="input-9">
+      <span class="label-text">KIDNAPPING AND ABDUCTION OF WOMEN AND GIRLS</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-10" type="number" placeholder="Enter the KIDNAPPING AND ABDUCTION OF OTHERS Value" name="kaaoo"
+      required />
+    <label for="input-10">
+      <span class="label-text">KIDNAPPING AND ABDUCTION OF OTHERS</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-11" type="number" placeholder="Enter the DACOITY Value" name="dacoity" required />
+    <label for="input-11">
+      <span class="label-text">DACOITY</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-12" type="number" placeholder="Enter the PREPARATION AND ASSEMBLY FOR DACOITY Value" name="paafd"
+      required />
+    <label for="input-12">
+      <span class="label-text">PREPARATION AND ASSEMBLY FOR DACOITY</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-13" type="number" placeholder="Enter the ROBBERY Value" name="robbery" required />
+    <label for="input-13">
+      <span class="label-text">ROBBERY</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-14" type="number" placeholder="Enter the BURGLARY Value" name="burglary" required />
+    <label for="input-14">
+      <span class="label-text">BURGLARY</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-15" type="number" placeholder="Enter the THEFT Value" name="theft" required />
+    <label for="input-15">
+      <span class="label-text">THEFT</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-16" type="number" placeholder="Enter the AUTO THEFT Value" name="autotheft" required />
+    <label for="input-16">
+      <span class="label-text">AUTO THEFT</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-17" type="number" placeholder="Enter the OTHER THEFT Value" name="othertheft" required />
+    <label for="input-17">
+      <span class="label-text">OTHER THEFT</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-18" type="number" placeholder="Enter the RIOTS Value" name="riots" required />
+    <label for="input-18">
+      <span class="label-text">RIOTS</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-19" type="number" placeholder="Enter the CRIMINAL BREACH OF TRUST Value" name="cbot" required />
+    <label for="input-19">
+      <span class="label-text">CRIMINAL BREACH OF TRUST</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-20" type="number" placeholder="Enter the CHEATING Value" name="cheating" required />
+    <label for="input-20">
+      <span class="label-text">CHEATING</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-21" type="number" placeholder="Enter the COUNTERFIETING Value" name="counterfieting" required />
+    <label for="input-21">
+      <span class="label-text">COUNTERFIETING</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-22" type="number" placeholder="Enter the ARSON Value" name="arson" required />
+    <label for="input-22">
+      <span class="label-text">ARSON</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-23" type="number" placeholder="Enter the HURT/GREVIOUS HURT Value" name="h/gh" required />
+    <label for="input-23">
+      <span class="label-text">HURT/GREVIOUS HURT</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-24" type="text" placeholder="Enter the DOWRY DEATHS Value" name="dd" required />
+    <label for="input-24">
+      <span class="label-text">DOWRY DEATHS</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-25" type="number" placeholder="Enter the ASSAULT ON WOMEN WITH INTENT TO OUTRAGE HER MODESTY Value"
+      name="aowwitohm" required />
+    <label for="input-25">
+      <span class="label-text">ASSAULT ON WOMEN WITH INTENT TO OUTRAGE HER MODESTY</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-26" type="number" placeholder="Enter the INSULT TO MODESTY OF WOMEN Value" name="itmow" required />
+    <label for="input-26">
+      <span class="label-text">INSULT TO MODESTY OF WOMEN</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-27" type="number" placeholder="Enter the CRUELTY BY HUSBAND OR HIS RELATIVES Value" name="cbhohr"
+      required />
+    <label for="input-27">
+      <span class="label-text">CRUELTY BY HUSBAND OR HIS RELATIVES</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-28" type="number" placeholder="Enter the IMPORTATION OF GIRLS FROM FOREIGN COUNTRIES Value"
+      name="iogffc" required />
+    <label for="input-28">
+      <span class="label-text">IMPORTATION OF GIRLS FROM FOREIGN COUNTRIES</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-29" type="number" placeholder="Enter the CAUSING DEATH BY NEGLIGENCE Value" name="cdbn" required />
+    <label for="input-29">
+      <span class="label-text">CAUSING DEATH BY NEGLIGENCE</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-30" type="number" placeholder="Enter the OTHER IPC CRIMES Value" name="otc" required />
+    <label for="input-30">
+      <span class="label-text">OTHER IPC CRIMES</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-31" type="number" placeholder="Enter the TOTAL IPC CRIMES Value" name="tic" required />
+    <label for="input-31">
+      <span class="label-text">TOTAL IPC CRIMES</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-32" type="number" placeholder="Enter the STATE/UT_encoded Value" name="s/u_e" required />
+    <label for="input-32">
+      <span class="label-text">STATE/UT_encoded</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <input id="input-33" type="number" placeholder="Enter the DISTRICT_encoded Value" name="d_e" required />
+    <label for="input-33">
+      <span class="label-text">DISTRICT_encoded</span>
+      <span class="nav-dot"></span>
+    </label>
+
+    <button type="submit">PREDICT CRIME LEVEL</button>
+    <p class="tip">Press Tab</p>
+
+  </form>
+</body>
+
+</html>
